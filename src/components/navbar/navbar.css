@@ -1,0 +1,131 @@
+.logo {
+  text-transform: capitalize;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  color: white;
+}
+
+nav {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-header {
+  width: 90vw;
+  max-width: 1170px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-center {
+  align-self: stretch;
+  display: none;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-color: transparent;
+  color: darkcyan;
+  width: 2rem;
+  height: 2rem;
+}
+
+.toggle-btn svg {
+  font-size: 1rem;
+}
+
+.nav-link {
+  align-self: stretch;
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.submenu {
+  position: absolute;
+  top: 10rem;
+  left: 30%;
+  width: 60vw;
+  height: 8rem;
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transform: rotateX(-90deg) translateY(-20%);
+  transform-origin: top;
+  perspective: 1000px;
+  transition: transform 0.5s ease-in-out opacity 0.2s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+}
+
+.show-submenu {
+  visibility: visible;
+  transform: rotateX(0deg) translateY(-20%);
+  transition: 1s;
+  opacity: 1;
+  z-index: 10;
+}
+
+.submenu-content {
+  display: grid;
+  align-items: center;
+  padding: 1rem;
+}
+
+.submenu h2 {
+  text-transform: capitalize;
+  margin-left: 1rem;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.submenu a {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: lightslategray;
+  line-height: 1.5rem;
+}
+
+@media screen and (min-width:800px) {
+
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+
+  .submenu {
+    display: flex;
+  }
+
+}

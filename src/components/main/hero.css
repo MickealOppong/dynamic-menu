@@ -1,0 +1,37 @@
+.hero {
+  width: 100vw;
+  height: 100vh;
+}
+
+.heading {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.heading-title {
+  font-size: 2.5rem;
+  text-align: left;
+  text-transform: capitalize;
+  color: white;
+}
+
+.heading p {
+  color: white;
+  margin-top: 0;
+}
+
+@media screen and (min-width:768px) {
+  .heading {
+    margin-top: 15rem;
+  }
+
+  .heading-title {
+    text-align: center;
+  }
+
+  .heading p {
+    text-align: center;
+  }
+}
